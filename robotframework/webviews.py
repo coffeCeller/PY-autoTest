@@ -296,6 +296,8 @@ def display_email(request):
         emails = paginator.page(paginator.num_pages)  # 如果输入的的页数不在系统的页数中，则显示最后一页
     return render(request, "email_add_page.html",{"user": username,"emails": emails})
 
+
+
 #添加收件人
 def add_email_recevier(request):
     username = request.session.get('user', '')

@@ -29,7 +29,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.Login),
-    path('home/', views.Home),
+    path('home/', views.Login),
+    path('', views.Home),
     path('logout/', views.Logout),
     path('create_product/', views.create_product),
     path('product_add_data/', views.product_add_data),
@@ -82,7 +83,6 @@ urlpatterns = [
     path('add_email_recevier/',webviews.add_email_recevier),
     path('add_email_sendermessage/',webviews.add_email_sender),
     path('email_add_page/',webviews.display_email),
-
 ]
 # +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 # re_path(r'^media/(.*)$', serve, {'document_root': settings.MEDIA_ROOT})

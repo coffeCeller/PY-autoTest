@@ -24,4 +24,3 @@ class WebcaseAdmin(admin.ModelAdmin):
     inlines = [WebcasestepAdmin]
 admin.site.register(Webcase,WebcaseAdmin)
 
-

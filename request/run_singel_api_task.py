@@ -6,7 +6,7 @@ import pymysql
 
 def readSQL():
     sql ="SELECT task_id,task_modelname,task_casename,task_Apiurl,task_Apiheader,task_Apiformdata,task_Apimethod,task_Apiexpectresult,task_result,task_status_code from apitest_singel_apis_task"
-    coon = pymysql.connect(user='root',password='a12345678',db='autozone', port=3306, host='127.0.0.1',charset='utf8')
+    coon = pymysql.connect(user='root',password='hsn123456',db='autotest', port=3306, host='127.0.0.1',charset='utf8')
     cursor = coon.cursor()
     singel_api_task = cursor.execute(sql)
     singel_api_task_result = cursor.fetchmany(singel_api_task)
@@ -42,7 +42,7 @@ def readSQL():
 #         self.connection()
 
 def read_Results():
-    db = pymysql.connect(user='root',password='a12345678',db='autozone', port=3306, host='127.0.0.1',charset='utf8')
+    db = pymysql.connect(user='root',password='hsn123456',db='autotest', port=3306, host='127.0.0.1',charset='utf8')
     cursor = db.cursor()
     sql1 = "SELECT count(task_id) FROM apitest_singel_apis_task WHERE apitest_singel_apis_task.task_result='Pass'"
     passresult = cursor.execute(sql1)
